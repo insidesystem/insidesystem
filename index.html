@@ -126,20 +126,30 @@
     <img src="logo.png" alt="Logo Inside System" style="width:140px; margin-bottom: 20px;">
     <h1>Inside System</h1>
     <p>Tecnologia para transformar sua casa em um ambiente inteligente.</p>
-    <button class="btn-acao">Conheça nossos serviços</button>
+    <button class="btn-acao" id="btn-servicos">Conheça nossos serviços</button>
   </div>
 </div>
 
-  <script>
-    setTimeout(() => {
-      document.getElementById('mensagem').classList.add('mostrar');
-    }, 1000);
+<script>
+  // Exibir mensagem e apresentação após o efeito
+  setTimeout(() => {
+    document.getElementById('mensagem').classList.add('mostrar');
+  }, 1000);
 
-    setTimeout(() => {
-      document.body.classList.add('ligado');
-      document.getElementById('apresentacao').style.display = 'flex';
-    }, 4000);
-  </script>
+  setTimeout(() => {
+    document.body.classList.add('ligado');
+    document.getElementById('apresentacao').style.display = 'flex';
+  }, 4000);
+
+  // Rolar até a seção de serviços ao clicar no botão
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('btn-servicos');
+    btn.addEventListener('click', () => {
+      document.getElementById('servicos').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+  
   <section class="servicos" id="servicos">
   <h2>Serviços</h2>
   <div class="principais-servicos">
