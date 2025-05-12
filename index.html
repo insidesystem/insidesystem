@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Inside System - Automação Residencial</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 2s, color 2s;
+    }
+    .mensagem {
+      opacity: 0;
+      font-size: 2em;
+      text-align: center;
+      transition: opacity 2s;
+    }
+    .ligado {
+      background-color: #f5f5f5;
+      color: #000;
+    }
+    .mensagem.mostrar {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="mensagem" id="mensagem">Alexa, ligar luzes</div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('mensagem').classList.add('mostrar');
+    }, 1000);
+    setTimeout(() => {
+      document.body.classList.add('ligado');
+    }, 4000);
+  </script>
+</body>
+</html>
