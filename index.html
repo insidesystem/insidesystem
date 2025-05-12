@@ -62,11 +62,7 @@
       background-color: #000;
       color: white;
       font-family: 'Segoe UI', sans-serif;
-      height: 100vh;
-      display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       transition: background-color 2s, color 2s;
     }
 
@@ -123,6 +119,7 @@
 </head>
 <body>
   
+<div id="abertura" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <div class="mensagem" id="mensagem">Alexa, Abrir o site da Inside</div>
 
   <div class="apresentacao" id="apresentacao">
@@ -131,6 +128,7 @@
     <p>Tecnologia para transformar sua casa em um ambiente inteligente.</p>
     <button class="btn-acao">Conheça nossos serviços</button>
   </div>
+</div>
 
   <script>
     setTimeout(() => {
