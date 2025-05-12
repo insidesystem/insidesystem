@@ -4,6 +4,31 @@
   <meta charset="UTF-8">
   <title>Inside System - Automação Residencial</title>
   <style>
+    .whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
     .servicos {
   background-color: #f9f9f9;
   padding: 60px 20px;
@@ -176,5 +201,8 @@
     <li>Sistemas de Alarme de Incêndio</li>
   </ul>
 </section>
+  <a href="https://wa.me/5551989499889" class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
 </body>
 </html>
