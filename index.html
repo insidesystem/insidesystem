@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,34 +20,29 @@
   z-index: 1000;
   transition: transform 0.3s;
 }
-
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
-
 .whatsapp-float img {
   width: 32px;
   height: 32px;
 }
 
-    .servicos {
+.servicos {
   background-color: #f9f9f9;
   padding: 60px 20px;
   text-align: center;
 }
-
 .servicos h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
 }
-
 .principais-servicos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
-
 .servico {
   background: white;
   border-radius: 8px;
@@ -54,17 +50,14 @@
   max-width: 300px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
-
 .servico h3 {
   margin-bottom: 10px;
   color: #111;
 }
-
 .servico p {
   color: #444;
   font-size: 0.95em;
 }
-
 .lista-servicos {
   list-style: none;
   padding: 0;
@@ -74,7 +67,6 @@
   justify-content: center;
   gap: 15px;
 }
-
 .lista-servicos li {
   background-color: #fff;
   border-radius: 4px;
@@ -82,79 +74,64 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   font-size: 0.95em;
 }
-    body {
-      margin: 0;
-      background-color: #000;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
-      flex-direction: column;
-      transition: background-color 2s, color 2s;
-      position: relative; /* <- adicione esta linha */
-    }
 
-    .mensagem {
-      opacity: 0;
-      font-size: 2em;
-      text-align: center;
-      transition: opacity 2s;
-    }
-
-    .ligado {
-      background-color: #f5f5f5;
-      color: #111;
-    }
-
-    .mensagem.mostrar {
-      opacity: 1;
-    }
-
-    .apresentacao {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 600px;
-      margin-top: 30px;
-    }
-
-    .apresentacao h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    .apresentacao p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    .btn-acao {
-      background-color: #0066cc;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1em;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .btn-acao:hover {
-      background-color: #004c99;
-    }
+body {
+  margin: 0;
+  background-color: #000;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  flex-direction: column;
+  transition: background-color 2s, color 2s;
+  position: relative;
+}
+.mensagem {
+  opacity: 0;
+  font-size: 2em;
+  text-align: center;
+  transition: opacity 2s;
+}
+.ligado {
+  background-color: #f5f5f5;
+  color: #111;
+}
+.mensagem.mostrar {
+  opacity: 1;
+}
+.apresentacao {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 30px;
+}
+.apresentacao h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.apresentacao p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.btn-acao {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-acao:hover {
+  background-color: #004c99;
+}
   </style>
 </head>
 <body>
-  <a href="https://wa.me/5551989499889?text=Olá!%20Gostaria%20de%20um%20orçamento" 
-   class="whatsapp-float" 
-   target="_blank" 
-   title="Fale conosco no WhatsApp" 
-   aria-label="Fale conosco pelo WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
-</a>
 
 <div id="abertura" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <div class="mensagem" id="mensagem">Alexa, Abrir o site da Inside</div>
-
   <div class="apresentacao" id="apresentacao">
     <img src="logo.png" alt="Logo Inside System" style="width:140px; margin-bottom: 20px;">
     <h1>Inside System</h1>
@@ -164,17 +141,13 @@
 </div>
 
 <script>
-  // Exibir mensagem e apresentação após o efeito
   setTimeout(() => {
     document.getElementById('mensagem').classList.add('mostrar');
   }, 1000);
-
   setTimeout(() => {
     document.body.classList.add('ligado');
     document.getElementById('apresentacao').style.display = 'flex';
   }, 4000);
-
-  // Rolar até a seção de serviços ao clicar no botão
   document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('btn-servicos');
     btn.addEventListener('click', () => {
@@ -182,8 +155,8 @@
     });
   });
 </script>
-  
-  <section class="servicos" id="servicos">
+
+<section class="servicos" id="servicos">
   <h2>Serviços</h2>
   <div class="principais-servicos">
     <div class="servico">
@@ -199,7 +172,6 @@
       <p>Projetos sonoros com qualidade e conforto, distribuindo o som de forma uniforme em todo o ambiente.</p>
     </div>
   </div>
-
   <h3 style="margin-top: 40px;">Outros Serviços</h3>
   <ul class="lista-servicos">
     <li>Rede de Internet</li>
@@ -209,7 +181,6 @@
     <li>Sistemas de Alarme de Incêndio</li>
   </ul>
 </section>
-  </section>
 
 <!-- Botão flutuante do WhatsApp -->
 <a href="https://wa.me/5551989499889?text=Olá!%20Gostaria%20de%20um%20orçamento"
