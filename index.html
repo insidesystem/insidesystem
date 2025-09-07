@@ -126,6 +126,59 @@ body {
 .btn-acao:hover {
   background-color: #004c99;
 }
+
+.rodape {
+  background-color: #111;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+  font-size: 0.95em;
+}
+
+.rodape-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.rodape-coluna {
+  flex: 1 1 220px;
+}
+
+.rodape-coluna h3, .rodape-coluna h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.rodape-coluna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rodape-coluna ul li {
+  margin: 5px 0;
+}
+
+.rodape-coluna a {
+  color: #25D366;
+  text-decoration: none;
+}
+
+.rodape-coluna a:hover {
+  text-decoration: underline;
+}
+
+.rodape-copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85em;
+  color: #aaa;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
   </style>
 </head>
 <body>
@@ -179,6 +232,8 @@ body {
     <li>Sistemas de Alarme de Incêndio</li>
   </ul>
 </section>
+
+<!-- Botão whasapp -->  
 <a href="https://wa.me/5551989499889?text=Olá!%20Gostaria%20de%20um%20orçamento"
    class="whatsapp-float"
    target="_blank"
@@ -186,5 +241,41 @@ body {
    aria-label="Fale conosco pelo WhatsApp">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
 </a>
+  
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="rodape-container">
+    <div class="rodape-coluna">
+      <h3>Inside System</h3>
+      <p>Automação residencial, segurança e tecnologia para sua casa.</p>
+    </div>
+    
+    <div class="rodape-coluna">
+      <h4>Contato</h4>
+      <p>📞 (51) 98949-9889</p>
+      <p>✉ contato@insidesystem.net</p>
+      <p>📍 Porto Alegre - RS</p>
+    </div>
+
+    <div class="rodape-coluna">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="https://wa.me/5551989499889" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div class="rodape-coluna">
+      <h4>Siga-nos</h4>
+      <a href="https://instagram.com/" target="_blank">Instagram</a><br>
+      <a href="https://facebook.com/" target="_blank">Facebook</a>
+    </div>
+  </div>
+  <div class="rodape-copy">
+    © 2025 Inside System - Todos os direitos reservados
+  </div>
+</footer>
+
 </body>
 </html>
