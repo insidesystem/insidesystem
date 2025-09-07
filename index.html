@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Inside System - Automação Residencial</title>
   <style>
+/* Botão WhatsApp */
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -29,69 +30,13 @@
   height: 32px;
 }
 
-/* Serviços */
-.servicos {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.servicos h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-}
-
-.principais-servicos {
+/* Abertura */
+#abertura {
+  min-height: 100vh; 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.servico {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.servico h3 {
-  margin-bottom: 10px;
-  color: #111;
-}
-
-.servico p {
-  color: #444;
-  font-size: 0.95em;
-}
-
-.lista-servicos {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.lista-servicos li {
-  background-color: #fff;
-  border-radius: 4px;
-  padding: 10px 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  font-size: 0.95em;
-}
-
-body {
-  margin: 0;
-  background-color: #000;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
   flex-direction: column;
-  transition: background-color 2s, color 2s;
-  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .mensagem {
@@ -154,6 +99,131 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Serviços */
+.servicos {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.servicos h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.principais-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.servico {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.servico h3 {
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.servico p {
+  color: #444;
+  font-size: 0.95em;
+}
+
+.lista-servicos {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.lista-servicos li {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-size: 0.95em;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+}
+
+.rodape-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.rodape-coluna {
+  flex: 1 1 200px;
+}
+
+.rodape-coluna h3, .rodape-coluna h4 {
+  margin-bottom: 10px;
+  color: #25D366;
+}
+
+.rodape-coluna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rodape-coluna ul li {
+  margin-bottom: 6px;
+}
+
+.rodape-coluna a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.rodape-coluna a:hover {
+  color: #25D366;
+}
+
+.rodape-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #aaa;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+/* Body */
+body {
+  margin: 0;
+  background-color: #000;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  flex-direction: column;
+  transition: background-color 2s, color 2s;
+  position: relative;
+}
+
+.ligado {
+  background-color: #f5f5f5;
+  color: #111;
+}
   </style>
 </head>
 <body>
@@ -167,7 +237,7 @@ body {
 </a>
 
 <!-- Abertura -->
-<div id="abertura" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+<div id="abertura">
   <div class="mensagem" id="mensagem">Alexa, Abrir o site da Inside</div>
 
   <div class="apresentacao" id="apresentacao">
@@ -193,6 +263,10 @@ body {
   setTimeout(() => {
     document.body.classList.add('ligado');
     document.getElementById('apresentacao').style.display = 'flex';
+
+    // Libera altura da abertura para mostrar o restante
+    document.getElementById('abertura').style.minHeight = "auto";
+    document.getElementById('abertura').style.height = "auto";
   }, 4000);
 
   // Rolar até a seção de serviços ao clicar no botão
@@ -231,5 +305,40 @@ body {
     <li>Sistemas de Alarme de Incêndio</li>
   </ul>
 </section>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="rodape-container">
+    <div class="rodape-coluna">
+      <h3>Inside System</h3>
+      <p>Automação residencial, segurança e tecnologia para sua casa.</p>
+    </div>
+    
+    <div class="rodape-coluna">
+      <h4>Contato</h4>
+      <p>📞 (51) 98949-9889</p>
+      <p>✉ contato@insidesystem.net</p>
+      <p>📍 Porto Alegre - RS</p>
+    </div>
+
+    <div class="rodape-coluna">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="https://wa.me/5551989499889" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div class="rodape-coluna">
+      <h4>Siga-nos</h4>
+      <a href="https://instagram.com/" target="_blank">Instagram</a><br>
+      <a href="https://facebook.com/" target="_blank">Facebook</a>
+    </div>
+  </div>
+  <div class="rodape-copy">
+    © 2025 Inside System - Todos os direitos reservados
+  </div>
+</footer>
 </body>
 </html>
